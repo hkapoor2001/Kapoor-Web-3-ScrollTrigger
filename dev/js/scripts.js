@@ -7,26 +7,25 @@ gsap.registerPlugin(GSDevTools, DrawSVGPlugin, ScrollTrigger);
 
 
 const mainTL = gsap.timeline({scrollTrigger: {trigger:"#preloadersection", pin="true", scrub: true}});
-const rotatetime = .4;
-const drawtime = .8;
+
 
 function innerframefade(){
     const tl = gsap.timeline();
-    tl.from("#innerframe",{duration:0.5, alpha:0})
-    .to("#innerframe",{duration:0.5, alpha:1})
+    tl.from("#innerframe",{alpha:0})
+    .to("#innerframe",{alpha:1})
     return tl;
 }
 
 function outerframedraw(){
     const tl = gsap.timeline();
-    tl.from("#outerframe",{duration:8.8, drawSVG: "0", ease:"none"})
+    tl.from("#outerframe",{drawSVG: "0", ease:"none"})
 }
 
 
 function drawpaintinglines1(){
     const tl = gsap.timeline();
 
-    tl.from(".painting1",{duration:drawtime, drawSVG: "0", ease:"none"})
+    tl.from(".painting1",{drawSVG: "0", ease:"none"})
 
     return tl;
 }
@@ -35,13 +34,13 @@ function drawpaintinglines1(){
 function rotate1(){
     const tl = gsap.timeline();
 
-    tl.from("#painting1",{rotation: "0", duration:.35, alpha: 1})
+    tl.from("#painting1",{rotation: "0", alpha: 1})
 
-    tl.to("#painting1",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"1same")
+    tl.to("#painting1",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"1same")
 
-    tl.to("#innerframe",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"1same")
+    tl.to("#innerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%"},"1same")
 
-    tl.to("#outerframe",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"1same")
+    tl.to("#outerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%"},"1same")
 
     return tl;
 }
@@ -49,7 +48,7 @@ function rotate1(){
 function drawpaintinglines2(){
     const tl = gsap.timeline();
 
-    tl.from(".painting2",{duration:drawtime, drawSVG: "0%", ease:"none"})
+    tl.from(".painting2",{drawSVG: "0%", ease:"none"})
 
     return tl;
 }
@@ -59,11 +58,11 @@ function rotate2(){
 
     tl.from("#painting2",{rotation: "0", alpha: 1})
 
-    tl.to("#painting2",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"2same")
+    tl.to("#painting2",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"2same")
 
-    tl.to("#innerframe",{rotation: "180_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"2same")
+    tl.to("#innerframe",{rotation: "180_cw", ease: "none", transformOrigin: "50% 50%"},"2same")
 
-    tl.to("#outerframe",{rotation: "180_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"2same")
+    tl.to("#outerframe",{rotation: "180_cw", ease: "none", transformOrigin: "50% 50%"},"2same")
 
     return tl;
 }
@@ -72,7 +71,7 @@ function rotate2(){
 function drawpaintinglines3(){
     const tl = gsap.timeline();
 
-    tl.from(".painting3",{duration:drawtime, drawSVG: "0%", ease:"none"})
+    tl.from(".painting3",{drawSVG: "0%", ease:"none"})
 
     return tl;
 }
@@ -82,11 +81,11 @@ function rotate3(){
 
     tl.from("#painting3",{rotation: "0", alpha: 1})
 
-    tl.to("#painting3",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"3same")
+    tl.to("#painting3",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"3same")
 
-    tl.to("#innerframe",{rotation: "270_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"3same")
+    tl.to("#innerframe",{rotation: "270_cw", ease: "none", transformOrigin: "50% 50%"},"3same")
 
-    tl.to("#outerframe",{rotation: "270_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"3same")
+    tl.to("#outerframe",{rotation: "270_cw", ease: "none", transformOrigin: "50% 50%"},"3same")
 
     return tl;
 }
@@ -94,7 +93,7 @@ function rotate3(){
 function drawpaintinglines4(){
     const tl = gsap.timeline();
 
-    tl.from(".painting4",{duration:drawtime, drawSVG: "0%", ease:"none"})
+    tl.from(".painting4",{drawSVG: "0%", ease:"none"})
 
     return tl;
 }
@@ -104,11 +103,11 @@ function rotate4(){
 
     tl.from("#painting4",{rotation: "0", alpha: 1})
 
-    tl.to("#painting4",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"4same")
+    tl.to("#painting4",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"4same")
 
-    tl.to("#innerframe",{rotation: "360_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"4same")
+    tl.to("#innerframe",{rotation: "360_cw", ease: "none", transformOrigin: "50% 50%"},"4same")
 
-    tl.to("#outerframe",{rotation: "360_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%"},"4same")
+    tl.to("#outerframe",{rotation: "360_cw", ease: "none", transformOrigin: "50% 50%"},"4same")
 
     return tl;
 }
@@ -116,7 +115,7 @@ function rotate4(){
 function drawpaintinglines5(){
     const tl = gsap.timeline();
 
-    tl.from(".painting5",{duration:drawtime, drawSVG: "0%", ease:"none"})
+    tl.from(".painting5",{drawSVG: "0%", ease:"none"})
 
     return tl;
 }
@@ -126,15 +125,14 @@ function rotate5(){
 
     tl.from("#painting5",{rotation: "0", alpha: 1})
 
-    tl.to("#painting5",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
+    tl.to("#painting5",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
 
-    tl.to("#innerframe",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
+    tl.to("#innerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
 
-    tl.to("#outerframe",{rotation: "90_cw", duration:rotatetime, ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
+    tl.to("#outerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
 
-    tl.to("#preloadersection",{autoAlpha:0, duration:1.25})
+    tl.to("#preloadersection",{autoAlpha:0})
 
-   //to("#hidecontent",{autoAlpha:0, duration:1.25})
 
     return tl;
 }

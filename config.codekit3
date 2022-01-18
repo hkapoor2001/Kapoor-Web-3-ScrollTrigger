@@ -160,6 +160,17 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/dev\/js\/scrolltrigger.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/dev\/js\/scrolltrigger-min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 0
+    },
     "\/dev\/scss\/base\/_base.scss" : {
       "aP" : 0,
       "bl" : 0,
@@ -461,7 +472,7 @@
   },
   "projectAttributes" : {
     "creationDate" : 654993130.85782802,
-    "displayValue" : "Kapoor-Motion-P1",
+    "displayValue" : "Kapoor-Web3-ScrollTrigger",
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "brackets-forest",
     "iconImageWasSetByUser" : 0
