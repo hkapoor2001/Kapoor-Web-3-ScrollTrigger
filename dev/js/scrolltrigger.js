@@ -35,9 +35,9 @@ export function drawpainting(painting){
 export function rotate(){
     const tl = gsap.timeline();
 
-    tl.from(paintingrotate,{rotation: "0", alpha: 1})
+    tl.from(painting,{rotation: "0", alpha: 1})
 
-    tl.to(paintingrotate,{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"1same")
+    tl.to(painting,{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"1same")
 
     tl.to("#innerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%"},"1same")
 
@@ -48,22 +48,13 @@ export function rotate(){
 
 
 
-function rotatefade(){
+function fade(){
     const tl = gsap.timeline();
-
-    tl.from("#painting5",{rotation: "0", alpha: 1})
-
-    tl.to("#painting5",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
-
-    tl.to("#innerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
-
-    tl.to("#outerframe",{rotation: "90_cw", ease: "none", transformOrigin: "50% 50%", alpha: 0},"5same")
 
     tl.to("#preloadersection",{autoAlpha:0})
 
     return tl;
 }
-
 
 
 
@@ -80,6 +71,8 @@ mainTL.add(innerframefade())
       .add(drawpainting())
       .add (rotate())
       .add(drawpainting())
-      .add (rotatefade())
+      .add (rotate("same"))
+      .add (fade("same"))
+
 
 GSDevTools.create();
