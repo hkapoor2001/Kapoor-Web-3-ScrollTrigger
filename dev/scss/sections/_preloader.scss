@@ -1,0 +1,30 @@
+#preloadersection{
+        display: grid;
+        grid-template-columns: auto 70vw auto;
+        grid-template-areas: ". preloader ";
+        position: absolute;
+        height: 200vh;
+        width: 100%;
+        z-index: 5000;
+        background-color: #E8C197;
+    
+        @include md{
+            grid-template-columns: auto 60vw auto;
+        }
+        @include lg{
+            grid-template-columns: auto 60vw auto;
+        }
+        @include xl{
+            grid-template-columns: auto 70vw auto;
+        }
+    
+        #preloaderdiv{
+            height: 100vh;
+            stroke-width: 1px;
+            grid-area: preloader;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
