@@ -1,11 +1,12 @@
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
 import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { ScrollTrigger } from "gsap/DrawSVGPlugin";
 
-gsap.registerPlugin(GSDevTools, DrawSVGPlugin);
+gsap.registerPlugin(GSDevTools, DrawSVGPlugin, ScrollTrigger);
 
 
-const mainTL = gsap.timeline();
+const mainTL = gsap.timeline({scrollTrigger: {trigger:"#preloadersection", pin="true", scrub: true}});
 const rotatetime = .4;
 const drawtime = .8;
 

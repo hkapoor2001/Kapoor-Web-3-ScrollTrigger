@@ -7,7 +7,7 @@
       "uuidString" : "6B2A6D1F-223D-4A26-8B90-6ADE7187175A"
     }
   ],
-  "creatorBuild" : "34214",
+  "creatorBuild" : "34264",
   "files" : {
     "\/deploy\/css\/styles.css" : {
       "aP" : 1,
@@ -64,11 +64,11 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
-    "\/deploy\/img\/preloader.svg" : {
+    "\/deploy\/img\/Preloader.svg" : {
       "ft" : 2097152,
       "miP" : 0,
       "oA" : 2,
-      "oAP" : "\/deploy\/img\/preloader.svg",
+      "oAP" : "\/deploy\/img\/Preloader.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
@@ -1611,6 +1611,9 @@
       },
       "no-unused-labels" : {
         "active" : 1
+      },
+      "no-unused-private-class-members" : {
+        "active" : 0
       },
       "no-unused-vars" : {
         "active" : 1,
