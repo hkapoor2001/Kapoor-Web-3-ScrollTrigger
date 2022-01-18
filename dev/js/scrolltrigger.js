@@ -32,7 +32,7 @@ export function drawpainting(painting){
     return tl;
 }
 
-export function rotate(){
+export function rotate(painting){
     const tl = gsap.timeline();
 
     tl.from(painting,{rotation: "0", alpha: 1})
